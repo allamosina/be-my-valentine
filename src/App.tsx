@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FloatingBalloons } from './components/FloatingBalloons'
 import { ValentineQuestion } from './components/ValentineQuestion'
