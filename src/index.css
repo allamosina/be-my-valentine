@@ -1,0 +1,77 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Caveat:wght@700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+/* ===== LIGHT THEME (default) ===== */
+:root {
+  --color-bg: #FFFAF5;
+  --color-hot-pink: #FF3366;
+  --color-coral: #FF8833;
+  --color-yellow: #FFCC00;
+  --color-lavender: #7733FF;
+  --color-plum: #1A1A2E;
+  --color-text: #1A1A2E;
+  --color-white: #FFFFFF;
+  --color-blue: #3366FF;
+  --color-green: #22CC88;
+  --color-shadow: rgba(255, 255, 255, 0.95);
+  --color-grid-dot: rgba(51, 102, 255, 0.06);
+  --font-display: 'Syne', sans-serif;
+  --font-hand: 'Caveat', cursive;
+}
+
+/* ===== DARK THEME ===== */
+.dark {
+  --color-bg: #0A0012;
+  --color-hot-pink: #FF2DF1;
+  --color-coral: #FF5F1F;
+  --color-yellow: #00FFFF;
+  --color-lavender: #BF5FFF;
+  --color-plum: #F0E6FF;
+  --color-text: #F0E6FF;
+  --color-white: #FFFFFF;
+  --color-blue: #00BFFF;
+  --color-green: #00FFB2;
+  --color-shadow: rgba(191, 95, 255, 0.4);
+  --color-grid-dot: rgba(191, 95, 255, 0.045);
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.5s ease, color 0.4s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: rgba(255, 51, 102, 0.2);
+  color: var(--color-plum);
+}
+
+.dot-grid-bg {
+  background-color: var(--color-bg);
+  background-image: radial-gradient(circle, var(--color-grid-dot) 1.2px, transparent 1.2px);
+  background-size: 26px 26px;
+  transition: background-color 0.5s ease;
+}
+
+.dark .dot-grid-bg {
+  background-image:
+    linear-gradient(var(--color-grid-dot) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid-dot) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
